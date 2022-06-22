@@ -19,12 +19,13 @@ class Square:
     @size.setter
     def size(self, value):
         """Sets the size"""
-        if not isintance(size, int):
+        if not isintance(value, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
     def area(self):
         """get area of square"""
-        return (self.__size * self.__size)
+        area = self.__size * self.__size
+        return (area)
