@@ -1,26 +1,28 @@
 #!/usr/bin/python3
 
 
-"""Define class Square"""
+"""Define class Square."""
 
 
 class Square:
     """represent a square"""
     def __init__(self, size=0, position=(0, 0)):
-        """initilize square
-        Args: size (int):size of new square
-        Args: position (int, int): position of new square"""
+        """initilize square.
+        Args:
+            size (int):size of new square.
+            position (int, int): position of new square.
+        """
         self.__size = size
         self.__position = position
 
     @property
     def size(self):
-        """Gets the current size"""
+        """Gets the current size."""
         return (self.__size)
 
     @size.setter
     def size(self, value):
-        """Sets the size"""
+        """Sets the size."""
         if not isintance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -29,7 +31,7 @@ class Square:
 
     @property
     def position(self):
-        """gets positions of square"""
+        """gets positions of square."""
         return (self.__position)
 
     @position.setter
@@ -42,18 +44,18 @@ class Square:
         self.__position = value
 
     def area(self):
-        """get area of square"""
+        """get area of square."""
         area = self.__size * self.__size
         return (area)
 
     def my_print(self):
-        """ prints in stdout the square with the character #"""
+        """ prints in stdout the square with the character #."""
         if self.__size == 0:
             print("")
             return
 
-    [print("") for i in range(0, self.__position[1])]
-    for i in range(0, self.__size):
-        [print("#", end="") for j in range(self.__size)]
-        [print("#", end="") for k in range(self.__size)]
-        print("")
+        [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print("#", end="") for j in range(self.__size)]
+            [print("#", end="") for k in range(self.__size)]
+            print("")
