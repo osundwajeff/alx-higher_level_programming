@@ -1,0 +1,60 @@
+Using ``add_integer``
+-----------------------
+
+Parameter "b" is defaulted to int "98"
+checks if input are of type (int)
+Returns the sum of inputs.
+
+First import ``add_integer``
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+Basic usage:
+    >>> add_integer(3, 2)
+    5
+
+Negative input:
+    >>> add_integer(56, -4)
+    52
+
+One input:
+    >>> add_integer(10)
+    108
+
+Float and negative input:
+    >>> add_integer(20.5, -8)
+    12
+
+Float overflow:
+    >>> add_integer(400.5)
+    498
+
+Float NaN:
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+String input:
+    >>> add_integer(45, "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+None input:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Double negative float input:
+    >>> add_integer(-100.5, -10.8)
+    -110
+
+Double string input:
+    >>> add_integer("alx", "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
