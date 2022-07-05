@@ -12,6 +12,6 @@ def load_from_json_file(filename):
         else an exception is thrown."""
     lines = []
     with open(filename, encodings="utf-8") as f:
-        for line in f.read.lines():
+        for line in f.readlines():
             lines.append(line)
     return JSONDecoder().decode("".join(lines))
