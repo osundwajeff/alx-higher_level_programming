@@ -3,10 +3,10 @@
 
 
 class MyList(list):
-    """ class MyList that inherits from list 
+    """ class MyList that inherits from list
     """
 
     def print_sorted(self):
         """ prints in sorted format """
 
-        print(sorted(self)
+        print(sorted(self))
