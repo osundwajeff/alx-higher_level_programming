@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""add_item
-"""
+"""add_item"""
 import sys
+
+
+""" import functions from the previous files"""
+
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
+""" check if file exists
+    if not, create file """
 try:
     loadFile = load_from_json_file("add_item.json")
 except FileNotFoundError:
